@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Personal Web Analytics",
+  "description": "As a browser of websites, use Google Analytics on your whole browser to track you around the Internet?",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["ga.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["pwa.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html"
+}

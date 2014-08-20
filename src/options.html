@@ -1,0 +1,114 @@
+<html>
+<head>
+  <title>Personal Web Analytics</title>
+  <style type="text/css">
+
+    body {
+      font-family: 'Lucida Grande', sans-serif;
+      font-size: 75%;
+      margin: 0 25px;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    a {
+      color: rgb(17, 85, 204);
+    }
+
+    h1 {
+      font-size: 1.5em;
+      font-weight: normal;
+      border-bottom: 1px solid #e1e1e1;
+      padding: 20px 0 15px 0;
+    }
+
+    h2 {
+      font-size: 1.3em;
+      font-weight: normal;
+    }
+
+    .row {
+      margin: 10px 0;
+    }
+
+    label {
+      display: inline-block;
+      margin-right: 5px;
+      text-align: right;
+      width: 80px;
+    }
+
+    input {
+      border: 1px solid #bfbfbf;
+      border-radius: 2px;
+      box-sizing: border-box;
+      color: #444;
+      font: inherit;
+      min-height: 2em;
+      padding: 3px;
+      padding-bottom: 4px;
+      width: 300px;
+    }
+
+    button {
+      padding: 0 10px;
+      min-height: 2em;
+      min-width: 4em;
+      background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 2px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+      color: #444;
+      font: inherit;
+      margin: 0 0 0 90px;
+      text-shadow: 0 1px 0 rgb(240, 240, 240);
+    }
+
+    #flash {
+      background-color: green;
+      color: #fff;
+      padding: 4px 8px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Personal Web Analytics for Chrome</h1>
+
+  <h2>Settings</h2>
+
+  <div class="row">
+    <label for="ua">Tracking ID:</label>
+    <input type="text" name="ua" id="ua" placeholder="i.e.  UA-123123-1" />
+  </div>
+  <div class="row">
+    <label for="debug">Debug:</label>
+    <input type="checkbox" name="debug" id="debug" value="true" />
+  </div>
+  <div class="row">
+    <button id="save">Save</button> <span id="flash"></span>
+  </div>
+
+  <h2>Getting a Property ID</h2>
+  <ol>
+    <li>Browse to <a href="https://www.google.com/analytics/web/">Google Analytics</a>.</li>
+    <li>Select <strong>Admin &raquo; the account of your choice &raquo; New Property</strong>.</li>
+    <li>Choose <strong>Web Site</strong>, and enter any Name and URL (we recommend 'Personal Web Analytics' and google.com respectively).</li>
+    <li>Save the Tracking ID (sometimes called a Property ID) into settings.</li>
+  </ol>
+
+  <h2>Setup Google Analytics</h2>
+  <p>Browse to your new Properties settings, in <strong>Site Search Settings</strong>, select <strong>Do track Site Search &raquo; Query parameter</strong> and set it to <strong>q</strong>.</p>
+
+  <h2>About</h2>
+  <p>
+    Copyright &copy; 2014 <a href="https://twitter.com/davestone">Dave Stone</a>.
+    Source code on <a href="https://github.com/davestone/chrome-personal-web-analytics">Github</a>.
+    The included 'ga.js' is the property of Google, they do not sponsor or endorse this product.
+  </p>
+
+  <script src="options.js"></script>
+
+</body>
+</html>
